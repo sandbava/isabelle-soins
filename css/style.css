@@ -1,0 +1,244 @@
+@font-face {
+    font-family: 'Sofia';
+    src: url('../fonts/Sofia-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Comic Neue';
+    src: url('../fonts/ComicNeue-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+*, *::before, *::after{
+    box-sizing: border-box;
+}
+
+:root {
+    --color-pelage: bisque;
+    --color-ciel: #6BB0F5;
+    --color-ciel-sombre: #0c80f6;
+}
+
+img {
+    max-width: 100%;
+}
+
+body {
+    font-family: Comic Neue;
+    font-size: 18pt;
+    margin: 0;
+    background-color: var(--color-pelage);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Sofia";
+    margin: 40px 0 10px 0;
+}
+
+.noselect {
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Old versions of Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.row {
+    display: block;
+}
+
+.home-section {
+    margin-top: 50px;
+}
+
+.titles {
+    text-align: center;
+}
+
+.btn {
+    text-decoration: none;
+    color: white;
+    font-size: 14pt;
+    padding: 10px 20px;
+    font-weight: bold;
+}
+
+.btn.arrow {
+    color: black;
+}
+
+.float-right {
+    float: right;
+}
+
+.active-zone {
+    cursor: pointer;
+}
+
+.active-zone .btn-swipe {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    background-color: var(--color-ciel);
+}
+
+/* couche verte */
+.active-zone .btn-swipe::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: var( --color-ciel-sombre);
+    transform: translateX(-100%);
+    transition: transform 0.4s ease-in-out;
+    z-index: 0;
+}
+
+/* hover */
+.active-zone:hover .btn-swipe::before {
+    transform: translateX(0);
+}
+
+/* texte au-dessus */
+.btn-swipe span {
+    position: relative;
+    z-index: 1;
+}
+
+.effet-transition .stack {
+    background: url(/images/effet/nature-sprite-2.png) no-repeat -9999px -9999px;
+    background-size: 0;
+}
+
+.stack {
+    position: relative;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 912 / 1368;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.stack .picture {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.effet-transition .stack .picture:nth-child(1) {
+    background-image: url(../images/home_me.JPG);
+}
+
+.effet-transition .stack .picture:nth-child(2) {
+    background-image: url(../images/home_se.JPG);
+}
+
+.effet-transition .stack .picture:nth-child(3) {
+    background-image: url(../images/home_ca.JPG);
+}
+
+.effet-transition .stack .picture.hide {
+    -webkit-mask: url(../images/effet/nature-sprite-2.png);
+    mask: url(../images/effet/nature-sprite-2.png);
+    -webkit-mask-size: 7100% 100%;
+    mask-size: 7100% 100%;
+    -webkit-animation: mask-play 1.4s steps(70) forwards;
+    animation: mask-play 1.4s steps(70) forwards;
+}
+
+@-webkit-keyframes mask-play {
+    from {
+        -webkit-mask-position: 0% 0;
+        mask-position: 0% 0;
+    }
+    to {
+        -webkit-mask-position: 100% 0;
+        mask-position: 100% 0;
+    }
+}
+
+@keyframes mask-play {
+    from {
+        -webkit-mask-position: 0% 0;
+        mask-position: 0% 0;
+    }
+    to {
+        -webkit-mask-position: 100% 0;
+        mask-position: 100% 0;
+    }
+}
+
+.phone {
+    background: #139675;
+    &:hover {
+        background: darken(#139675, 10%);
+    }
+    &:active,
+    &:focus {
+        background: darken(#139675, 20%);
+    }
+    &:after {
+        content: "\F095";
+    }
+    &:hover:after {
+        -webkit-animation: wiggle .05s alternate ease infinite;
+        animation: wiggle .05s alternate ease infinite;
+    }
+}
+
+@keyframes wiggle {
+    from { transform: rotate(0deg); }
+    to   { transform: rotate(30deg); }
+}
+
+@media (min-width:768px) {
+    .row {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap:50px;
+        flex-direction: row-reverse;
+    }
+
+    .stack {
+        position: relative;
+        height:800px;
+        width: 533.33px;
+        aspect-ratio: auto;
+        border-radius: 10px;
+        overflow: hidden;
+    }
+
+    .col {
+        margin-bottom: 20px;
+    }
+
+    .col-2-sm {
+        order: 2;
+    }
+
+    .col-1-sm {
+        order: 1;
+    }
+
+    .titles {
+        text-align: left;
+    }
+}
