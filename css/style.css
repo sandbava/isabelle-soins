@@ -20,6 +20,8 @@
 
 :root {
     --color-green: #9BBCB2;
+    --color-light-green: #bed9d0;
+    --color-dark-green: #74998C;
     --color-red-light: #d77182;
     --color-red-dark: #c94e5d;
 }
@@ -54,7 +56,7 @@ main {
 
 header {
     display: block;
-    height: 100px;
+    min-height: 100px;
     width: 100%;
 }
 
@@ -152,11 +154,15 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .light-green-bg {
-    background-color: #aac6bd;
+    background-color: var(--color-light-green);
 }
 
 .dark-green-bg {
-    background-color: #74998C;
+    background-color: var(--color-dark-green);
+}
+
+header {
+    display: block;
 }
 
 .row {
@@ -205,6 +211,7 @@ a:hover h1 {
     font-weight: bold;
     border-radius: 10px;
     box-shadow: 5px 5px 10px #00000055;
+    height: 42px;
 }
 
 /* base commune */
@@ -279,7 +286,10 @@ a:hover h1 {
 
 @media (min-width:768px)
 {
-
+    header {
+        display: flex;
+        justify-content: flex-start;
+    }
 }
 
 @media (min-width:992px)
