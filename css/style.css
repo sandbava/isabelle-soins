@@ -163,6 +163,7 @@ h1, h2, h3, h4, h5, h6 {
 
 header {
     display: block;
+    text-align: center;
 }
 
 .row {
@@ -289,6 +290,7 @@ a:hover h1 {
     header {
         display: flex;
         justify-content: flex-start;
+        text-align: unset;
     }
 }
 
