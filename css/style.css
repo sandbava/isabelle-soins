@@ -217,13 +217,13 @@ h1, h2, h3, h4, h5, h6 {
     background-color: var(--color-red-light);
 }
 
-.gradient-green-bg {
-    background: #BED9D0;
+.gradient-light-to-normal-green-bg {
+    background: var(--color-light-green);
     background: linear-gradient(0deg, var(--color-light-green) 0%, var(--color-green) 100%);
 }
 
-.reverse-gradient-green-bg {
-    background: #BED9D0;
+.gradient-dark-to-light-green-bg {
+    background: var(--color-dark-green);
     background: linear-gradient(0deg, var(--color-dark-green) 0%, var(--color-light-green) 100%);
 }
 
