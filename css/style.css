@@ -217,6 +217,16 @@ h1, h2, h3, h4, h5, h6 {
     background-color: var(--color-red-light);
 }
 
+.gradient-green-bg {
+    background: #BED9D0;
+    background: linear-gradient(0deg, var(--color-light-green) 0%, var(--color-green) 100%);
+}
+
+.reverse-gradient-green-bg {
+    background: #BED9D0;
+    background: linear-gradient(0deg, var(--color-dark-green) 0%, var(--color-light-green) 100%);
+}
+
 .color-white {
     color: white;
 }
@@ -231,6 +241,10 @@ h1, h2, h3, h4, h5, h6 {
 
 .row {
     display: block;
+}
+
+.col {
+    flex: 1;
 }
 
 .titles {
@@ -427,19 +441,27 @@ a:hover h1 {
         padding-right: 40px;
     }
 
-    .d-flex {
+    .d-flex-sm {
         display: flex;
     }
 
-    .justify-content-center {
+    .justify-content-center-sm {
         justify-content: center;
     }
 
-    .align-items-center {
+    .align-items-center-sm {
         align-items: center;
     }
 
-    .align-items-center {
-        align-items: center;
+    .height-100pc-sm {
+        height: 100%;
+    }
+
+    .align-items-stretch-sm {
+        align-items: stretch;
+    }
+
+    .inner {
+        flex: 1; /* prend toute la hauteur */
     }
 }
