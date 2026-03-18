@@ -149,6 +149,18 @@ h1, h2, h3, h4, h5, h6 {
     border: 2px dashed rgba(255, 255, 255, 0.3);
 }
 
+.glass-box-overlay {
+    position: unset;
+}
+
+.col-40pc-sm {
+    width: 100%;
+}
+
+.col-60pc-sm {
+    width: 100%;
+}
+
 .green-bg {
     background-color: var(--color-green);
 }
@@ -331,5 +343,20 @@ a:hover h1 {
 
     .dash-03 {
         padding:10px 40px 10px 10px;
+    }
+
+    .glass-box-overlay {
+        position: relative;
+        z-index: 2;
+        margin-right: -120px;
+        margin-top: 350px;
+    }
+
+    .col-40pc-sm {
+        width: 40%;
+    }
+
+    .col-60pc-sm {
+        width: 60%;
     }
 }
