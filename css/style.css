@@ -161,6 +161,10 @@ h1, h2, h3, h4, h5, h6 {
     width: 100%;
 }
 
+.ratio38on57 {
+    aspect-ratio: 38/57;
+}
+
 .green-bg {
     background-color: var(--color-green);
 }
