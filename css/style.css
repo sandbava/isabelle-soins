@@ -316,6 +316,10 @@ a:hover h1 {
         display: flex;
         justify-content: center;
         align-items: center;
+        gap:10px;
+    }
+
+    .row-gap-50 {
         gap:50px;
     }
 
