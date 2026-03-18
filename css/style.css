@@ -426,4 +426,20 @@ a:hover h1 {
     .pr-40-sm {
         padding-right: 40px;
     }
+
+    .d-flex {
+        display: flex;
+    }
+
+    .justify-content-center {
+        justify-content: center;
+    }
+
+    .align-items-center {
+        align-items: center;
+    }
+
+    .align-items-center {
+        align-items: center;
+    }
 }
