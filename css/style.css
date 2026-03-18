@@ -156,7 +156,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .dash-03 {
-    padding:10px 10px 20px 10px;
+    padding:20px;
     border-radius: 10px;
     border: 2px dashed rgba(255, 255, 255, 0.3);
 }
@@ -353,13 +353,14 @@ a:hover h1 {
     }
 
     .dash-03 {
-        padding:10px 40px 10px 10px;
+        padding:10px;
     }
 
     .glass-box-overlay {
         position: relative;
         z-index: 2;
         margin-right: -120px;
+        margin-left: 50px;
     }
 
     .col-40pc-sm {
@@ -376,5 +377,9 @@ a:hover h1 {
 
     .mt--10-sm {
         margin-top: -10px;
+    }
+
+    .pr-40-sm {
+        padding-right: 40px;
     }
 }
