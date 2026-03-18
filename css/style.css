@@ -56,8 +56,13 @@ main {
 
 header {
     display: block;
+    text-align: center;
     min-height: 100px;
     width: 100%;
+}
+
+section {
+    margin-bottom: 15px;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -99,8 +104,16 @@ h1, h2, h3, h4, h5, h6 {
     margin-bottom: 60px;
 }
 
+.mb-15 {
+    margin-bottom: 15px;
+}
+
 .text-align-center {
     text-align: center;
+}
+
+.vertical-align-bottom {
+    vertical-align: bottom;
 }
 
 .rounded-corners {
@@ -171,11 +184,6 @@ h1, h2, h3, h4, h5, h6 {
 
 .dark-green-bg {
     background-color: var(--color-dark-green);
-}
-
-header {
-    display: block;
-    text-align: center;
 }
 
 .row {
@@ -362,5 +370,9 @@ a:hover h1 {
 
     .col-60pc-sm {
         width: 60%;
+    }
+
+    .mb-0-sm {
+        margin-bottom: 0px;
     }
 }
