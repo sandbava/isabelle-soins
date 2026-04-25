@@ -224,7 +224,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .gradient-dark-to-light-green-bg {
     background: var(--color-dark-green);
-    background: linear-gradient(0deg, var(--color-dark-green) 0%, var(--color-light-green) 100%);
+    background: linear-gradient(180deg, var(--color-dark-green) 0%, var(--color-light-green) 100%);
 }
 
 .color-white {
