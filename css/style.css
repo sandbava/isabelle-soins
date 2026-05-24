@@ -140,6 +140,11 @@ h1, h2, h3, h4, h5, h6 {
     vertical-align: bottom;
 }
 
+.justify-content-center {
+    display: flex;
+    align-items: center;     /* vertical */
+}
+
 .rounded-corners {
     border-radius: 10px;
 }
@@ -219,7 +224,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .gradient-light-to-normal-green-bg {
     background: var(--color-light-green);
-    background: linear-gradient(0deg, var(--color-light-green) 0%, var(--color-green) 100%);
+    background: linear-gradient(180deg, var(--color-light-green) 0%, var(--color-green) 100%);
 }
 
 .gradient-dark-to-light-green-bg {
@@ -277,8 +282,8 @@ a:hover h1 {
     float: left;
 }
 
-.active-zone {
-    /*cursor: pointer;*/
+.line-height-70 {
+    line-height: 70px;
 }
 
 .btn {
