@@ -132,6 +132,15 @@ h1, h2, h3, h4, h5, h6 {
     margin-bottom: 15px;
 }
 
+.mx-auto {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.d-block {
+    display: block;
+}
+
 .text-align-center {
     text-align: center;
 }
